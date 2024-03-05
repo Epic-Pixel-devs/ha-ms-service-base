@@ -94,7 +94,7 @@ explicitamente:
 mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 
-A aplicação estará executando no endereço http://localhost:8080/
+A aplicação estará executando no endereço http://localhost:8080/base/v1/
 
 Também é possível simular uma execução do ambiente de produção no seu ambiente local.
 Para isso será necessário declarar explicitamente todas as variáveis de ambiente utilizadas pela
@@ -135,7 +135,7 @@ Responsáveis pelo projeto:
 
 | Nome          | Email                    |
 |---------------|--------------------------|
-| Responsável 1 | roberto.rosa7@gmail.com  |
+| Roberto Rosa  | roberto.rosa7@gmail.com  |
 | Responsável 2 | responsavel2@contato.com |
 | Responsável 3 | responsavel3@contato.com |
 
