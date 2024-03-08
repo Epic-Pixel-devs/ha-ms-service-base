@@ -11,5 +11,5 @@ import jakarta.persistence.Table
 @Table(name = "TB_USERS")
 class UserEntity(
     @Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null,
-    @Column(name = "name") private val name: String,
+    @Column(name = "name") val name: String,
 )
