@@ -4,23 +4,19 @@ import dev.epicpixel.ha.ms.service.base.document.UserDocument
 import dev.epicpixel.ha.ms.service.base.service.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.ResponseStatus
+import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/users")
 class UserController(private val userService: UserService) {
-
-
-    @PostMapping("/new-user")
-    @ResponseStatus(HttpStatus.OK)
-    fun save(@RequestBody userDocument: UserDocument): ResponseEntity<UserDocument> {
-        return ResponseEntity.ok(userService.save(userDocument))
-    }
 
     /**
      * Responsible to find all user on database
      */
-    @GetMapping("/users")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
     fun users(): ResponseEntity<List<UserDocument>> {
         return ResponseEntity.ok(userService.findAll())
