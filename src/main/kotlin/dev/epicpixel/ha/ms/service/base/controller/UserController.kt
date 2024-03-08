@@ -1,22 +1,28 @@
 package dev.epicpixel.ha.ms.service.base.controller
 
-import dev.epicpixel.ha.ms.service.base.dto.UserDto
-import dev.epicpixel.ha.ms.service.base.dto.toEntity
-import dev.epicpixel.ha.ms.service.base.repository.UserRepository
+import dev.epicpixel.ha.ms.service.base.document.UserDocument
+import dev.epicpixel.ha.ms.service.base.service.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
-class UserController(private val userRepository: UserRepository) {
+@RequestMapping("/login")
+class UserController(private val userService: UserService) {
 
-    @GetMapping("/")
+
+    @PostMapping("/new-user")
     @ResponseStatus(HttpStatus.OK)
-    fun health(): ResponseEntity<UserDto> {
-        val anUser = UserDto(1L, "Sample User Name")
-        userRepository.save(anUser.toEntity())
-        return ResponseEntity.ok<UserDto>(anUser)
+    fun save(@RequestBody userDocument: UserDocument): ResponseEntity<UserDocument> {
+        return ResponseEntity.ok(userService.save(userDocument))
+    }
+
+    /**
+     * Responsible to find all user on database
+     */
+    @GetMapping("/users")
+    @ResponseStatus(HttpStatus.OK)
+    fun users(): ResponseEntity<List<UserDocument>> {
+        return ResponseEntity.ok(userService.findAll())
     }
 }
