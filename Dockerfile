@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 8080
 
-ENTRYPOINT ["sh", "-c", "kotlin -Dserver.port=8080 -jar target/ms-service-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["sh", "-c", "java -Dserver.port=8080 -jar target/epixel-1.0.0.jar"]
