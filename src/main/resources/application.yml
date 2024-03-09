@@ -8,6 +8,10 @@ spring:
     mongodb:
       uri: mongodb+srv://herdeiros_aurora:herdeiros_aurora_001@cluster0.otugy2g.mongodb.net/apic_db?retryWrites=true&w=majority&appName=Cluster0
 
+jwt:
+  secret: fbad2abb4f9b599f8eb41d7ac6a3fc836fc2cbbdfbad2abb4f9b599f8eb41d7ac6a3fc836fc2cbbd
+  expiration: 86400
+
 logging:
   level:
     web: DEBUG
