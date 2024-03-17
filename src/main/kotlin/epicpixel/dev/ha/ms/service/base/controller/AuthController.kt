@@ -1,9 +1,9 @@
-package dev.epicpixel.ha.ms.service.base.controller
+package epicpixel.dev.ha.ms.service.base.controller
 
-import dev.epicpixel.ha.ms.service.base.document.UserDocument
-import dev.epicpixel.ha.ms.service.base.dto.AuthResponseDto
-import dev.epicpixel.ha.ms.service.base.service.JwtService
-import dev.epicpixel.ha.ms.service.base.service.UserService
+import epicpixel.dev.ha.ms.service.base.document.UserDocument
+import epicpixel.dev.ha.ms.service.base.dto.AuthResponseDto
+import epicpixel.dev.ha.ms.service.base.service.JwtService
+import epicpixel.dev.ha.ms.service.base.service.UserService
 import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

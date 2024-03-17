@@ -1,6 +1,6 @@
-package dev.epicpixel.ha.ms.service.base.repository
+package epicpixel.dev.ha.ms.service.base.repository
 
-import dev.epicpixel.ha.ms.service.base.document.UserDocument
+import epicpixel.dev.ha.ms.service.base.document.UserDocument
 import org.bson.types.ObjectId
 import org.springframework.data.mongodb.repository.MongoRepository
 

@@ -1,4 +1,4 @@
-package dev.epicpixel.ha.ms.service.base.service
+package epicpixel.dev.ha.ms.service.base.service
 
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.security.Keys
