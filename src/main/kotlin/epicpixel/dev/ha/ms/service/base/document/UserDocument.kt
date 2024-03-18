@@ -1,4 +1,4 @@
-package dev.epicpixel.ha.ms.service.base.document
+package epicpixel.dev.ha.ms.service.base.document
 
 import org.bson.types.ObjectId
 import org.springframework.data.annotation.Id

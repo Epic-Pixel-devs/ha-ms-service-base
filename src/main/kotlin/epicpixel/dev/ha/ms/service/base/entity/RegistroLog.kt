@@ -17,7 +17,8 @@ Cada Log deve ter informações como o ID do usuário, a ação realizada, a dat
 */
 @Entity
 class RegistroLog (){
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     val idRegistro: Int = 0
     var dataHora: LocalDateTime = LocalDateTime.now()
     @Column (nullable = false)
