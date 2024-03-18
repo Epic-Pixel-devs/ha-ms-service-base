@@ -8,7 +8,7 @@
 
 # ENTRYPOINT ["sh", "-c", "java -Dserver.port=8081 -jar target/ms-service-1.0.2.jar"]
 
-FROM maven:3.8.5-openjdk17 as build
+FROM maven:3.8.5-openjdk-17 as build
 
 WORKDIR /app
 
