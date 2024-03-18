@@ -1,7 +1,7 @@
-package dev.epicpixel.ha.ms.service.base.service
+package epicpixel.dev.ha.ms.service.base.service
 
-import dev.epicpixel.ha.ms.service.base.document.UserDocument
-import dev.epicpixel.ha.ms.service.base.repository.UserRepository
+import epicpixel.dev.ha.ms.service.base.document.UserDocument
+import epicpixel.dev.ha.ms.service.base.repository.UserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

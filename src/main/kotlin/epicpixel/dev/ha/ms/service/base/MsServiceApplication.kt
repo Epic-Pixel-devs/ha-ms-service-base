@@ -1,4 +1,4 @@
-package dev.epicpixel.ha.ms.service.base
+package epicpixel.dev.ha.ms.service.base
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
