@@ -18,10 +18,10 @@ RUN mvn clean install
 
 FROM openjdk:17 as java17
 
-COPY --from=build ./app/target/*.jar ./ms-gateway.jar
+COPY --from=build ./app/target/*.jar ./ms-service-base.jar
 
 EXPOSE 8082
 # -Dspring.profiles.active=production
 # -Dserver.port=8082
 
-ENTRYPOINT java -jar ms-gateway.jar
+ENTRYPOINT java -jar ms-service-base.jar
