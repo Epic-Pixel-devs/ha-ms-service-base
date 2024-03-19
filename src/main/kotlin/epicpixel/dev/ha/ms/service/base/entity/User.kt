@@ -9,12 +9,11 @@ data class User(
     val id: Long? = null,
     val email: String,
     var password: String,
-
-    @Enumerated(EnumType.STRING)
-    val type: UserType = UserType.REGULAR,
-
+    val name: String,
     val createdAt: Instant = Instant.now(),
     val updatedAt: Instant = createdAt,
+    @Enumerated(EnumType.STRING)
+    val type: UserType = UserType.REGULAR,
 )
 
 enum class UserType{
