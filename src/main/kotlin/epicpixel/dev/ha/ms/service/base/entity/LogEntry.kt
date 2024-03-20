@@ -1,21 +1,20 @@
 package epicpixel.dev.ha.ms.service.base.entity
-import jakarta.persistence.*
+import org.bson.types.ObjectId
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.DBRef
+import org.springframework.data.mongodb.core.mapping.Document
+import org.springframework.data.mongodb.core.mapping.Field
 import java.time.Instant
 
-@Entity
+@Document("logs")
 data class LogEntry (
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null,
+    @Id val id: ObjectId = ObjectId(),
 
-    @ManyToOne
-    val user: User? = null,
-
+    val user: Long? = null, // TODO: trocar por: @DBRef val user: UserDocument? = null,
     val createdAt: Instant = Instant.now(),
 
-    @Enumerated(EnumType.STRING)
-    val level: LogLevel = LogLevel.INFO,
-
+    @Field("type") val level: LogLevel = LogLevel.INFO,
     val details : String,
 
 )
